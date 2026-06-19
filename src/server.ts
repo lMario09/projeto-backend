@@ -5,6 +5,7 @@ import { fileURLToPath } from 'url';
 import router from './routes/index.js';
 import produtosRouter from './routes/produtos.js';
 import voosRouter from './routes/voos.js';
+import alunosRouter from './routes/alunos.js';
 import pingRouter from './routes/ping.js';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -21,6 +22,7 @@ server.use('/', router);
 server.use('/produtos', produtosRouter);
 server.use('/voos', voosRouter);
 server.use('/ping', pingRouter);
+server.use('/alunos', alunosRouter);
 
 server.listen(3000, () => {
     console.log('Servidor rodando na porta http://localhost:3000');
